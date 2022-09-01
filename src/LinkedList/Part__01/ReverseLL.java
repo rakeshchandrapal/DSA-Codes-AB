@@ -4,24 +4,16 @@ public class ReverseLL {
 
     public static void main(String[] args) {
 
-        Node <Integer> n1 = new Node<>(10);
-        Node <Integer> n2 = new Node<>(20);
-        Node <Integer> n3 = new Node<>(30);
-        Node <Integer> n4 = new Node<>(40);
-        Node <Integer> n5 = new Node<>(50);
-        Node <Integer> n6 = new Node<>(60);
-
-
-        Node <Integer> head = n1;
-
-
-
+        Node <Integer> head = new Node<>(10);
+        head.next = new Node<>(20);
+        head.next.next = new Node<>(30);
+        head.next.next.next = new Node<>(40);
 
     }
 
     public static Node<Integer> reverseLinkedList(Node <Integer> head)
     {
-
+        return new Node<>(10);
     }
 }
 
