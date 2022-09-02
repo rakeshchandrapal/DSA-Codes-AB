@@ -17,19 +17,20 @@ public class Bubble {
 
     static node SortLL(node head)
     {
-//        node cur = head;
-        node cur2 = head;
-        while(cur2.next != null)
-        {
+        node cur = head;
+        node cur2 ;
+        while(cur.next != null) {
+            cur2 = head;
 
-                if(cur2.data > cur2.next.data)
-                {
-                    node temp = cur2;
-                    cur2 = cur2.next;
-                    cur2.next = temp;
+            while (cur2.next != null) {
+
+                if (cur2.data > cur2.next.data) {
+
                 }
                 cur2 = cur2.next;
             }
+            cur = cur.next;
+        }
 
         return head;
     }
