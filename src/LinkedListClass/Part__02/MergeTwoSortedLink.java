@@ -1,4 +1,4 @@
-package LinkedList.Part__02;
+package LinkedListClass.Part__02;
 
 public class MergeTwoSortedLink {
     public static void main(String[] args) {

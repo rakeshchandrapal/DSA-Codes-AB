@@ -1,4 +1,4 @@
-package LinkedList.Basics;
+package LinkedListClass.Basics;
 
 public class Bubble {
 
@@ -25,7 +25,9 @@ public class Bubble {
             while (cur2.next != null) {
 
                 if (cur2.data > cur2.next.data) {
-
+                    int temp = cur2.data;
+                    cur2.data = cur2.next.data;
+                    cur2.next.data = temp;
                 }
                 cur2 = cur2.next;
             }
@@ -36,7 +38,7 @@ public class Bubble {
     }
 
     public static void main(String[] args) {
-        node head = new node(10);
+        node head = new node(100);
         node n1 = new node (50);
         node n2 = new node (30);
         node n3 = new node (20);
@@ -46,17 +48,17 @@ public class Bubble {
         n2.next = n3;
 
         printL(head);
-        head = SortLL(head);
-        printL(head);
+        node newHead = SortLL(head);
+        printL(newHead);
 
     }
-}
-class node {
+static class node {
     int data;
     node next;
 
-    node(int data)
+    public node(int data)
     {
         this.data = data;
     }
+}
 }

@@ -1,4 +1,4 @@
-package LinkedList.Basics;
+package LinkedListClass.Basics;
 
 //import org.w3c.dom.Node;
 

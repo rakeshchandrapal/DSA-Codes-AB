@@ -1,4 +1,4 @@
-package LinkedList.Part__01;
+package LinkedListClass.Part__01;
 
 
 
