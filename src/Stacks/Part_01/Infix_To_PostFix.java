@@ -6,12 +6,15 @@ public class Infix_To_PostFix {
     public static void main(String[] args) {
 
 
-        String s = new String("(2+3)/(6/2-7+8)");
+//        String s = new String("(2+3)/(6/2-7+8)");
+//        String s = "(1+(4+5+2)-3)+(6+8)";
+//        String s ="2147483647";
+        String s  = "1 + 1";
         System.out.println(s);
         StringBuilder ans = new StringBuilder(infixToPostfix(s));
         System.out.println(ans);
 
-            String s1 = ans.toString();
+        String s1 = ans.toString();
         System.out.println(evaluationOfPostfix(s1));
 
     }
@@ -38,7 +41,11 @@ public class Infix_To_PostFix {
         {
             char cur = s.charAt(i);
 
-            if(cur == '(')
+            if(cur == ' ')
+            {
+                continue;
+            }
+            else if(cur == '(')
             {
                 stack.push(cur);
             }
@@ -62,6 +69,8 @@ public class Infix_To_PostFix {
                     ans.append(stack.pop());
                 }
                 stack.push(cur);
+
+
 
             }
 
@@ -90,6 +99,7 @@ public class Infix_To_PostFix {
     }
     public static int evaluationOfPostfix(String s)
     {
+        boolean check = true;
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         int l = s.length();
         for(int i = 0 ; i < l ; i++)
@@ -97,15 +107,20 @@ public class Infix_To_PostFix {
             char cur = s.charAt(i);
             if(isOperator(cur))
             {
+                check = false;
                 int second = stack.pop();
                 int first = stack.pop();
                 int ans = calculator(first,second,cur);
                 stack.push( ans);
             }
             else {
-                int element = cur - 0;
-                stack.push(element);
+
+                stack.push(cur - '0');
             }
+        }
+        if (check) {
+            int n = Integer.parseInt(s);
+            return n;
         }
         return stack.pop();
     }
