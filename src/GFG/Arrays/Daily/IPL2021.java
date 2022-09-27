@@ -20,10 +20,18 @@ public class IPL2021 {
             max = Math.max(max, arr[r]);
         }
         ans.add(max);
-        for(int r = j; r <= arr.length; r++)
+        for(int r = j; r <  arr.length; r++)
         {
-            max = Math.max(max, arr[r]);
+            max = Math.max(max,arr[r]);
+            if(r - k - 1 >= 0 && max == arr[r - k - 1])
+            {
+                for(int in = r - k; in < i; in++)
+                {
+                    max = Math.max(max, arr[r]);
+                }
+            }
             ans.add(max);
+
         }
         return ans;
     }

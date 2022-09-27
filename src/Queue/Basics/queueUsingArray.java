@@ -22,20 +22,21 @@ public class queueUsingArray {
             a[front] = data;
 
         }
-        if(rear == n-1)  throw new Exception("Queue IS FULL!!");
+        if(isFull())  throw new Exception("Queue IS FULL!!");
         rear++;
         a[rear] = data;
 
     }
 
-    boolean isEmpty()
-    {
-        return front == -1;
-    }
+    boolean isEmpty() { return rear == -1; }
+    boolean isFull(){ return rear == n - 1; }
 
     int dequeue() throws Exception{
-        if(isEmpty()) throw new Exception ("Stack IS EMPTY!!");
+        if(isEmpty()) throw new Exception ("Queue IS EMPTY!!");
+
         int ans = a[front];
+        for(int i = front; i < rear; i++){ a[i] = a[i+1]; }
+        rear--;
         return ans;
     }
 
