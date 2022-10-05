@@ -1,4 +1,4 @@
-package Daily_leet_code;
+package Daily_leet_code.Daily;
 /* Example 1:
 
 Input: nums = [4,2,3]

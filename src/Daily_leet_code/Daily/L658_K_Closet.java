@@ -1,6 +1,7 @@
-package Daily_leet_code;
-import javax.swing.*;
-import java.util.*;
+package Daily_leet_code.Daily;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class L658_K_Closet {
     public static void main(String[] args) {

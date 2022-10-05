@@ -1,6 +1,4 @@
-package Daily_leet_code;
-
-import java.util.Arrays;
+package Daily_leet_code.Daily;
 
 public class L557_reverse_String {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Daily_leet_code;
+package Daily_leet_code.Daily;
 
 import java.util.Arrays;
 

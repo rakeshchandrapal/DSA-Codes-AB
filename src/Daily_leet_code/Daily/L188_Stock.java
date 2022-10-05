@@ -1,4 +1,4 @@
-package Daily_leet_code;
+package Daily_leet_code.Daily;
 
 public class L188_Stock {
 
