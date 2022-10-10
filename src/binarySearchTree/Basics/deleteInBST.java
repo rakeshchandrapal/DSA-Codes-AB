@@ -20,6 +20,7 @@ public class deleteInBST {
             }
         }
         if(cur == null) return root;
+        return root;
     }
 
 }
