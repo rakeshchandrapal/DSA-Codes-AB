@@ -3,7 +3,7 @@ package Array145.Array_Basic_03.Session;
 public class RotateMatrix90Degree {
     static void printMatrix(int arr[][])
     {
-        int n = arr.length;;
+        int n = arr.length;
         for(int i = 0; i < n ; i++)
         {
             for(int j = 0; j < n ; j++)

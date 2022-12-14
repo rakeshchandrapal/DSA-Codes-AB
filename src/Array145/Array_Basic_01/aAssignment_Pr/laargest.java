@@ -1,34 +1,29 @@
 package Array145.Array_Basic_01.aAssignment_Pr;
 
+import java.util.Arrays;
+
 public class laargest {
 
     static  void  larg (int[] arr)
     {
-        int len = arr.length;
-        int larg = Integer.MIN_VALUE;
-        int j = len - 1;
-        int[] arr1 = new int[len ];
-        for (int i = len; i > arr.length - 1; i--)
-        {
-            if(arr[i] > larg)
-            {
-                arr1[j--] = larg;
+        int n = arr.length - 1;
+       int big = arr[n];
 
-            }
-            else
-            {
-                arr1 [ j--] = larg;
-            }
-        }
-        for (int em : arr1)
-        {
-            System.out.println(em+" ");
-        }
-
+       for(int i = n - 1; i >=0; i--) {
+           if (arr[i] > big) {
+               int temp = arr[i];
+               arr[i] = big;
+               big = temp;
+           } else {
+               arr[i] = big;
+           }
+       }
+       arr[n] = 0;
     }
     public static void main(String[] args) {
 
         int[] arr = {7,5,8,9,6,8,5,7,4,6};
-
+        larg(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

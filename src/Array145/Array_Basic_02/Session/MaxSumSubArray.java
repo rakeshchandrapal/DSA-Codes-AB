@@ -3,13 +3,13 @@ package Array145.Array_Basic_02.Session;
 public class MaxSumSubArray {
     static int findMaxSumSubArray(int[] arr)
     {
+        // Kadane's Algorithm.......
         int current = 0;
         int maxSum = Integer.MIN_VALUE;
-        for(int i = 0; i < arr.length; i++)
-        {
-            current += arr[i];
-            if(current > maxSum) maxSum = current;
-            if(current < 0) current = 0;
+        for (int j : arr) {
+            current += j;
+            if (current > maxSum) maxSum = current;
+            if (current < 0) current = 0;
         }
         return  maxSum;
     }

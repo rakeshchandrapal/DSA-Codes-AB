@@ -13,14 +13,8 @@ public class MaxWaterContainer {
             int area = height * distance;
 
             MaxArea = Math.max(area , MaxArea);
-            if(a[left] < a[right])
-            {
-                left++;
-            }
-            else
-            {
-                right--;
-            }
+            if(a[left] < a[right])left++;
+            else right--;
         }
         return MaxArea;
    }

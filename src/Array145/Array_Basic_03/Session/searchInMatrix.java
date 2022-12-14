@@ -4,6 +4,7 @@ public class searchInMatrix {
 
     public static  void main(String[] args)
     {
+        // it is a sorted row wise and column wise
         int arr[][] = {
                 {1,4,5,7},
                 {2,5,6,9},

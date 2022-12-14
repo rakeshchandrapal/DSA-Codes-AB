@@ -1,5 +1,7 @@
 package Array145.Matrix.Session;
 
+import java.util.Arrays;
+
 public class MaximumJI {
 
     public static void main (String[] args)
@@ -39,6 +41,8 @@ public class MaximumJI {
                 i++;
             }
         }
+        System.out.println(Arrays.toString(leftMin));
+        System.out.println(Arrays.toString(rightMax));
         return ans;
     }
     static int  findIandJ(int []arr)
